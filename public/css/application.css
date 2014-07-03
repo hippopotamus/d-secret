@@ -1,9 +1,47 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+.container{
+  width: 84%;
+  margin: 0 auto 0 auto;
+  height: 800px;
 }
+
+.left {
+  margin-top: 1em;
+  width: 40%;
+  float:left;
+  border-left: 1px solid black;
+  height: 95%;
+  display: inline-block;
+  /*border-right: 2px solid black;*/
+  text-align: center;
+  overflow: scroll;
+  /*overflow-bottom:hidden;*/
+}
+
+.right {
+  margin-top: 1em;
+  width: 40%;
+  float: right;
+
+  /*border-left: 1px dotted black;*/
+  border-right: 1px solid black;
+  box-shadow: 10px 5px 5px grey;
+  display: inline-block;
+  height: 95%;
+  text-align: center;
+}
+
+.secret {
+  box-shadow: 1px 2px 2px grey;
+  height: 4em;
+  border-top: 2px;
+  vertical-align: middle;
+}
+
+a{
+text-decoration: none;
+color: black;
+}
+
 th {
   text-align: left;
 }
