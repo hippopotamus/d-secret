@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  $('.secret').click(function(e){
+  $('a').click(function(e){
     e.preventDefault();
-    $.get("/comments", function(data){
+    $.get(this, function(data){
       $('.right').html(data);
     });
   });
