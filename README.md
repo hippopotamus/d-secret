@@ -1,1 +1,4 @@
-A take on the app 'secret'
+d-secret
+========
+
+a mini take on the app 'secret'
