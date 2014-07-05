@@ -15,15 +15,14 @@ $(document).ready(function() {
     })
   })
 
-  // $('#new_secret').on('click', function(e) {
-  //   e.preventDefault();
-  //   $.ajax({
-  //     method: "post",
-  //     url: '/new_secret',
-  //     success: function(data) {
-  //       $('#left_column').html(data) // need to find out how to do the ruby post method
-      // using ajax. can't find good examples online so far.
-  //     }
-  //   })
-  // })
+  $('#new_secret').on('click', function(e) {
+    e.preventDefault();
+    $.ajax({
+      method: "post",
+      url: '/new_secret',
+      success: function(data) {
+        $('#left_column').html(data)
+      }
+    })
+  })
 });
