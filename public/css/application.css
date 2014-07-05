@@ -19,11 +19,13 @@ body {
 }
 
 #left_column{
-
+  float: left;
+  width: 30%;
 }
 
 #comments_column {
-
+  float: left;
+  width: 40%;
 }
 
 .comment {
