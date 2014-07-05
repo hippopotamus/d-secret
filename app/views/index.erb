@@ -4,11 +4,17 @@
 
   <div id="container">
     <div id="left_column">
+      <div id="new_secret">
+        <form action="/new_secret" method="post">
+          <input type="text" name="content" placeholder="Tell me a secret"><br>
+          <input type="submit" value="I won't tell anyone">
+        </form>
+      </div>
       <table class="secret">
       <% @secrets.each_with_index do |secret, i| %>
         <tr><td id="scrt"><%=i%></td><td><%= secret.content %></td></tr>
       <%end%>
-      </table>
+    </table>
     </div>
 
     <div id="comments_column">

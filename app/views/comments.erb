@@ -1,3 +1,11 @@
+<div id="new_comment">
+  <form action="/new_comment/<%=@secret.id%>" method="post">
+    <input type="text" name="comment" placeholder="What do you think?"><br>
+    <input type="hidden" type="_method" value="PUT">
+    <input type="submit" value="I won't tell anyone">
+  </form>
+</div>
+
 <% @comments.each do |comment| %>
   <div class="comment"><%= comment.comment %></div>
 <%end%>
