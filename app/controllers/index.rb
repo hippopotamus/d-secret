@@ -1,5 +1,10 @@
 get "/" do
   @secrets = Secret.all.reverse
+  
+  @secrets.each do |secret|
+    secret.degrade_juiciness
+    secret.destroy if secret.juiciness <= 0
+  end
   erb :'index'
 end
 

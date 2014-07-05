@@ -15,14 +15,14 @@ $(document).ready(function() {
     })
   })
 
-  $('#new_secret').on('click', function(e) {
-    e.preventDefault();
-    $.ajax({
-      method: "post",
-      url: '/new_secret',
-      success: function(data) {
-        $('#left_column').html(data)
-      }
-    })
-  })
+  // $('#new_secret').on('click', function(e) {
+  //   e.preventDefault();
+  //   $.ajax({
+  //     method: "post",
+  //     url: '/new_secret',
+  //     success: function(data) {
+  //       $('#left_column').html(data)
+  //     }
+  //   })
+  // })
 });
