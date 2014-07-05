@@ -2,12 +2,15 @@ $(document).ready(function() {
   $('.secret').on('click', function(e) {
     e.preventDefault();
     var secret = $('.secret')
-    console.log(this)
+    // var sid =
+    // console.log(this)
     $.ajax({
-      url: "/",
+      method: "post",
+      url: "/comments/1", // need to add secret_id
       data: $('this').serialize,
+      format: "json",
       success: function(data) {
-        console.log("hi")
+        console.log(this)
         $("#comments_column").html(data)
       }
     })
