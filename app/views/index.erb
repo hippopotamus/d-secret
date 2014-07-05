@@ -1,18 +1,15 @@
-
 <body>
 <header><h1>Tell Me Your Secret</h1></header>
 
   <div id="container">
     <div id="left_column">
-      <div id="new_secret">
         <form action="/new_secret" method="post">
           <input type="text" name="content" placeholder="Tell me a secret"><br>
-          <input type="submit" value="I won't tell anyone">
+          <div id="new_secret"><input type="submit" value="I won't tell anyone"></div>
         </form>
-      </div>
       <table class="secret">
-      <% @secrets.each_with_index do |secret, i| %>
-        <tr><td id="scrt"><%=i%></td><td><%= secret.content %></td></tr>
+      <% @secrets.each do |secret| %>
+        <tr><td id="scrt"><%=secret.id%></td><td><%= secret.content %></td></tr>
       <%end%>
     </table>
     </div>

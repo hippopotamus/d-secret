@@ -1,5 +1,5 @@
 get "/" do
-  @secrets = Secret.all
+  @secrets = Secret.all.reverse
   erb :'index'
 end
 
