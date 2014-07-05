@@ -5,8 +5,8 @@
   <div id="container">
     <div id="left_column">
       <table class="secret">
-      <% @secrets.each do |secret| %>
-        <tr><td><%= secret.content %></td></tr>
+      <% @secrets.each_with_index do |secret, i| %>
+        <tr><td id="scrt"><%=i%></td><td><%= secret.content %></td></tr>
       <%end%>
       </table>
     </div>
