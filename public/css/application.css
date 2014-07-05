@@ -1,3 +1,10 @@
 .container{
-  
+
+}
+
+.secret td{
+  border: 1px dotted black;
+  text-align: center;
+  width: 30%;
+  padding: 2em;
 }

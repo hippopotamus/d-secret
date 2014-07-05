@@ -1,7 +1,9 @@
 <header><h1>Tell Me Your Secret</h1></header>
 
 <body>
+  <table class="secret">
   <% @secrets.each do |secret| %>
-    <%= secret.content %>
+    <tr><td><%= secret.content %></td></tr>
   <%end%>
+</table>
 </body>
