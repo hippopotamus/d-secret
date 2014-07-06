@@ -1,42 +1,83 @@
+body{
+background: rgb(69,72,77);
+}
+
+
+header{
+  width: 100%;
+  height:50px;
+  font-size:30px;
+  text-align: center;
+  background-color: black;
+  color:white;
+
+}
+
+
 .container{
-  width: 84%;
+  position: absolute;
+  top:50px;
+  left:10%;
+  width: 80%;
   margin: 0 auto 0 auto;
   height: 800px;
 }
 
 .left {
-  margin-top: 1em;
-  width: 40%;
+  margin-top: 20px;
+  width: 49%;
   float:left;
   border-left: 1px solid black;
+  border-top: 1px solid black;
   height: 95%;
   display: inline-block;
   /*border-right: 2px solid black;*/
   text-align: center;
   overflow: scroll;
   /*overflow-bottom:hidden;*/
+  background: rgb(226,226,226);
 }
 
 .right {
-  margin-top: 1em;
-  width: 40%;
+  margin-top: 20px;
+  width: 49%;
   float: right;
 
   /*border-left: 1px dotted black;*/
-  border-right: 1px solid black;
+  border: 1px solid black;
   box-shadow: 10px 5px 5px grey;
   display: inline-block;
   height: 95%;
   text-align: center;
+  background: rgb(226,226,226);
 }
 
 .secret {
   box-shadow: 1px 2px 2px grey;
   height: 4em;
-  border-top: 2px;
+  border: 2px;
+  padding-top: 1px;
+  margin: 8px 3px;
+  border-radius: 20px;
   vertical-align: middle;
+  color: white;
+  font-family: "Helvetica Light", sans-serif;
+  background: #104BA9;
 }
 
+
+.comment {
+  box-shadow: 1px 2px 2px grey;
+  height: 4em;
+  border: 2px;
+  padding-top: 1px;
+  margin: 8px 3px;
+  border-radius: 20px;
+  vertical-align: middle;
+  color: white;
+  font-family: "Helvetica Light", sans-serif;
+  background: green;
+}
 a{
 text-decoration: none;
 color: black;
