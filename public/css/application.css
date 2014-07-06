@@ -21,9 +21,12 @@ header{
 }
 
 #submit_secret{
-  float:left;
-  margin-top: 5px;
-  margin-left: 3px;
+margin-top: 1em;
+}
+
+.enter{
+margin-top: 1em;
+margin-left: 1em;
 
 }
 
@@ -33,12 +36,12 @@ header{
   top:50px;
   left:10%;
   width: 80%;
-  margin: 0 auto 0 auto;
-  height: 800px;
+  margin: 2em auto 0 auto;
+  height: 750px;
 }
 
 .left {
-  margin-top: 20px;
+  margin-top: 120px;
   width: 49%;
   float:left;
   border-left: 1px solid black;
@@ -51,7 +54,7 @@ header{
 }
 
 .right {
-  margin-top: 20px;
+  margin-top: 120px;
   width: 49%;
   float: right;
   border: 1px solid black;
@@ -67,7 +70,7 @@ header{
   height: 4em;
   border: 2px;
   padding-top: 1px;
-  margin: 50px 3px;
+  margin: 0.5em 3px;
   border-radius: 20px;
   vertical-align: middle;
   color: white;
