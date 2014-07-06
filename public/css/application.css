@@ -57,12 +57,13 @@ header{
   height: 4em;
   border: 2px;
   padding-top: 1px;
-  margin: 8px 3px;
+  margin: 30px 3px;
   border-radius: 20px;
   vertical-align: middle;
   color: white;
   font-family: "Helvetica Light", sans-serif;
   background: #104BA9;
+  position: relative;
 }
 
 

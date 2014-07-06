@@ -1,5 +1,5 @@
 get '/' do
-  @secrets = Secret.all#order(:votes).reverse_order
+  @secrets = Secret.all
   @votes = Vote.all
   @votes.each{ |vote| vote.degrade_votes }
   @secrets.each{ |secret| secret.destroy if secret.sum_of_votes }
@@ -13,4 +13,8 @@ end
 
 post '/new' do
 	Secret.create(content: params[:content])
+end
+
+post '/new_com' do
+  Comment.create(content: params[:content])
 end
