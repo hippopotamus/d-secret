@@ -1,5 +1,11 @@
 <div class="container">
 <div class="left">
+	<form id="post_secret" action="/new" method="POST" >
+		<label> Post your Secret</label><br>
+		<input type="text" name="content"></input>
+		<button id="submit_secret" style="button" type="submit">Submit</button>
+	</form>	
+
   <% @secrets.each do |secret| %>
   <% @secret = secret %>
   <%= erb :_secret %>
