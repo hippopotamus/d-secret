@@ -8,3 +8,7 @@ get '/:secret_id' do
   erb :comments
 end
 
+post '/new' do 
+	Secret.create(content: params[:content])
+end
+
