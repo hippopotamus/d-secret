@@ -13,4 +13,9 @@ class Secret < ActiveRecord::Base
     self.votes.each{ |vote| numbers << vote.number }
     numbers.inject(:+)
   end
+
+  def self.order_by_votes
+    self.all.sort_by{|secret| secret.sum_of_votes }.reverse
+  end
+
 end

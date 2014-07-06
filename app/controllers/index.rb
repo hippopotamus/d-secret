@@ -1,5 +1,5 @@
 get '/' do
-  @secrets = Secret.all#order(:votes).reverse_order
+  @secrets = Secret.order_by_votes
   @votes = Vote.all
   @votes.each{ |vote| vote.degrade_votes }
   @secrets.each{ |secret| secret.destroy if secret.sum_of_votes <= 0 }
