@@ -17,3 +17,7 @@ end
 post '/new' do
 	Secret.create(content: params[:content])
 end
+
+post '/new_comment' do
+  Comment.create(content: params[:comment])
+end

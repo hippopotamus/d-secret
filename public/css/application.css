@@ -13,6 +13,20 @@ header{
 
 }
 
+#submit_comment{
+  float:left;
+  margin-top: 5px;
+  margin-left: 3px;
+
+}
+
+#submit_secret{
+  float:left;
+  margin-top: 5px;
+  margin-left: 3px;
+
+}
+
 
 .container{
   position: absolute;
@@ -31,10 +45,8 @@ header{
   border-top: 1px solid black;
   height: 95%;
   display: inline-block;
-  /*border-right: 2px solid black;*/
   text-align: center;
   overflow: scroll;
-  /*overflow-bottom:hidden;*/
   background: rgb(226,226,226);
 }
 
@@ -42,10 +54,8 @@ header{
   margin-top: 20px;
   width: 49%;
   float: right;
-
-  /*border-left: 1px dotted black;*/
   border: 1px solid black;
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 10px 5px 5px black;
   display: inline-block;
   height: 95%;
   text-align: center;
@@ -53,25 +63,26 @@ header{
 }
 
 .secret {
-  box-shadow: 1px 2px 2px grey;
+  box-shadow: 1px 2px 2px black;
   height: 4em;
   border: 2px;
   padding-top: 1px;
-  margin: 8px 3px;
+  margin: 50px 3px;
   border-radius: 20px;
   vertical-align: middle;
   color: white;
   font-family: "Helvetica Light", sans-serif;
   background: #104BA9;
+  position: relative;
 }
 
 
 .comment {
-  box-shadow: 1px 2px 2px grey;
+  box-shadow: 1px 2px 2px black;
   height: 4em;
   border: 2px;
   padding-top: 1px;
-  margin: 8px 3px;
+  margin: 50px 3px;
   border-radius: 20px;
   vertical-align: middle;
   color: white;
