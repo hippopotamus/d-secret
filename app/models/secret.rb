@@ -7,4 +7,10 @@ class Secret < ActiveRecord::Base
   def create_vote
     Vote.create(secret_id: self.id)
   end
+
+  def sum_of_votes
+    numbers = []
+    self.votes.each{ |vote| numbers << vote.number }
+    numbers.inject(:+)
+  end
 end
