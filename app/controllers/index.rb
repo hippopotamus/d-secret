@@ -7,6 +7,7 @@ get '/' do
 end
 
 get '/:secret_id' do
+  @secret_id = params[:secret_id]
   @comments = Secret.find(params[:secret_id]).comments
   erb :comments, :layout => false
 end
@@ -16,5 +17,6 @@ post '/new' do
 end
 
 post '/new_comment' do
-  Comment.create(content: params[:comment])
+  @secret = Secret.find(params[:id])
+  @secret.comments.create(content: params[:comment])
 end
