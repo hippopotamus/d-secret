@@ -5,7 +5,7 @@ class Secret < ActiveRecord::Base
   after_save :create_vote
 
   def create_vote
-    Vote.create(secret_id: self.id)
+    Vote.create(secret_id: self.id )
   end
 
   def sum_of_votes
@@ -13,4 +13,9 @@ class Secret < ActiveRecord::Base
     self.votes.each{ |vote| numbers << vote.number }
     numbers.inject(:+)
   end
+
+  def self.order_by_votes
+    self.all.sort_by{|secret| secret.sum_of_votes }.reverse
+  end
+
 end

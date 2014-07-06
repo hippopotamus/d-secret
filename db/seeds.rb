@@ -1,5 +1,7 @@
 require 'faker'
 
+Uniquekey.create(key: "dong0001")
+
 15.times do
   Secret.create(content: Faker::Company.catch_phrase)
 end
