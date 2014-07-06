@@ -5,7 +5,7 @@ class Secret < ActiveRecord::Base
   after_save :create_vote
 
   def create_vote
-    Vote.create(secret_id: self.id )
+    Vote.create(secret_id: self.id)
   end
 
   def sum_of_votes
