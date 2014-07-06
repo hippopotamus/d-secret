@@ -21,7 +21,3 @@ $(document).ready(function() {
   }, function(){
      $(this).animate({"marginLeft":"-=20"}, 100);
   });
-
-
-
-});
