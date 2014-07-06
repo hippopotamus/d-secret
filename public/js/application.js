@@ -5,7 +5,6 @@ $(document).ready(function() {
       url: "/"+$(this).attr("id"),
       type: "GET"
     }).done(function(response) {
-      console.log(response);
       $(".right").html("");
       $(".right").append(response);
       $('.right div').hover(function(){
@@ -23,9 +22,28 @@ $(document).ready(function() {
       data: $("#post_secret").serialize(),
       error: function(){
         alert("an error occured");
+      },
+      success: function() {
+        window.location.reload();
       }
     });
   });
+
+  $('#submit_comment').click(function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "post",
+      url: "/new_comment",
+      data: $("#post_comment").serialize(),
+      error: function(){
+        alert("an error occured");
+      },
+      success: function() {
+        window.location.reload();
+      }
+    });
+  });
+
 
   $('.left a div').hover(function(){
     $(this).animate({"marginLeft":"+=20"}, 100);
