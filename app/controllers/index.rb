@@ -2,7 +2,7 @@ get '/' do
   @secrets = Secret.all#order(:votes).reverse_order
   @votes = Vote.all
   @votes.each do |vote|
-    secret.degrade_votes
+    vote.degrade_votes
     vote.destroy if vote.number <= 0
   end
   erb :index
