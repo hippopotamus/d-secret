@@ -1,4 +1,5 @@
 get '/' do
+  get_session_id
   @secrets = Secret.order_by_votes
   @votes = Vote.all
   @votes.each{ |vote| vote.degrade_votes }
@@ -7,7 +8,9 @@ get '/' do
 end
 
 get '/:secret_id' do
-  @comments = Secret.find(params[:secret_id]).comments
+  secret = Secret.find(params[:secret_id])
+  secret.votes.create(key: session[:id], number: 1)
+  @comments = secret.comments
   erb :comments, :layout => false
 end
 
