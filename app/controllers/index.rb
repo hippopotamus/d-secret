@@ -10,5 +10,6 @@ end
 
 post '/new' do 
 	Secret.create(content: params[:content])
+
 end
 

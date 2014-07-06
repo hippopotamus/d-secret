@@ -7,18 +7,19 @@ $(document).ready(function() {
   });
 
     $('#submit_secret').click(function(e){
-
-      var postData = $(this).serializeForm();
-
       e.preventDefault();
+
+
+
       $.ajax({
+        type: "post",
         url: "/new",
-        data: postData,
+        data: $("#post_secret").serialize(),
         error: function(){
           alert("an error occured");
         }
-
       });
+
     });
 
     
