@@ -1,10 +1,8 @@
 get '/' do
   @secrets = Secret.all#order(:votes).reverse_order
   @votes = Vote.all
-  @votes.each do |vote|
-    vote.degrade_votes
-    vote.destroy if vote.number <= 0
-  end
+  @votes.each{ |vote| vote.degrade_votes }
+  @secrets.each{ |secret| secret.destroy if secret.sum_of_votes }
   erb :index
 end
 
