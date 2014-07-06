@@ -9,7 +9,7 @@ end
 
 get '/:secret_id' do
   secret = Secret.find(params[:secret_id])
-  secret.votes.create(key: session[:id], number: 1)
+  secret.votes.create(key: session[:id], number: 1) if vote_is_unique?(secret)
   @comments = secret.comments
   erb :comments, :layout => false
 end
