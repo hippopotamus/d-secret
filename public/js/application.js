@@ -5,48 +5,42 @@ $(document).ready(function() {
       url: "/"+$(this).attr("id"),
       type: "GET"
     }).done(function(response) {
-      $(".right").html("");
-      $(".right").append(response);
-      });
-
-
-    //
+      $(".righty").html("");
+      $(".righty").append(response);
     });
+  });
 
-    //console.log("/"+$(this).attr("id"));
-
-
-  $(".right").on('click','#post_comment',(function(e){
-       e.preventDefault();
-      $.ajax({
-        type: "post",
-        url: "/new_comment",
-        data: $("#post_comment").serialize(),
-        error: function(){
-          alert("an error occured");
-        },
-        success: function() {
-          window.location.reload()
-      }});
-      }));
-
-
-    $('#submit_secret').click(function(e){
-      e.preventDefault();
-      $.ajax({
-        type: "post",
-        url: "/new",
-        data: $("#post_secret").serialize(),
-        error: function(){
-          alert("an error occured");
-        },
-        success: function() {
-          window.location.reload();
-        }
-      });
+  $(".right").on('click','#submit_comment',(function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "post",
+      url: "/new_comment",
+      data: $("#post_comment").serialize(),
+      error: function(){
+        alert("an error occured");
+      },
+      success: function(data) {
+        window.location.reload()
+        $(".righty").html("");
+        $(".righty").append(response);
+      }
     });
+  }));
 
-
+  $('#submit_secret').click(function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "post",
+      url: "/new",
+      data: $("#post_secret").serialize(),
+      error: function(){
+        alert("an error occured");
+      },
+      success: function() {
+        window.location.reload();
+      }
+    });
+  });
 
   $('.left a div').hover(function(){
     $(this).animate({"marginLeft":"+=20"}, 100);
