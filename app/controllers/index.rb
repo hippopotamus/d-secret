@@ -24,6 +24,11 @@ get '/hotness/get' do
   #{votes: Secret.find(params[:id]).sum_of_votes}.to_json
 end
 
+get '/logout/now' do
+  session.clear
+  redirect '/'
+end
+
 post '/new' do
 	Secret.create(content: params[:content])
 end
