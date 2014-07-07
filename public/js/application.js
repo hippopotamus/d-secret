@@ -12,6 +12,7 @@ $(document).ready(function() {
 
   $(".right").on('click','#submit_comment',(function(e){
     e.preventDefault();
+    console.log("hi")
     $.ajax({
       type: "post",
       url: "/new_comment",

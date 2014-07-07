@@ -8,6 +8,7 @@ get '/' do
 end
 
 get '/:secret_id' do
+  @secret_id = params[:secret_id]
   secret = Secret.find(params[:secret_id])
   secret.votes.create(key: session[:id], number: 1) if vote_is_unique?(secret)
   @comments = secret.comments
@@ -19,9 +20,10 @@ post '/new' do
 end
 
 post '/new_comment' do
-  @secret = Secret.find(params[:id])
+  p "hi"
   p params[:id]
+  @secret = Secret.find(params[:id])
   @secret.comments.create(secret_id: params[:id], content: params[:comment])
   content_type :json
-  (Comment.last.to_json)
+  Comment.last.to_json
 end
