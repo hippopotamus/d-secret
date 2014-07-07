@@ -11,7 +11,7 @@ $(document).ready(function() {
     e.preventDefault();
     console.log($('a').not($(this).children()).children());
     $('a').not($(this).children()).children().css("background-color", "#23bdbd");
-    $(this).children().css("background-color", "#ffba2f");
+    $(this).children().css("background-color", "#378e8e");
     $.ajax({
       url: "/"+$(this).attr("id"),
       type: "GET"

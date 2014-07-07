@@ -109,7 +109,7 @@ button {
   /*border-radius: 20px;*/
   vertical-align: middle;
   color: white;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Varela Round', sans-serif;
   background: #23bdbd;
   position: relative;
 }
@@ -123,9 +123,9 @@ button {
   /*border-radius: 20px;*/
   vertical-align: middle;
   color: white;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Varela Round', sans-serif;
   /*box-shadow: 1px 2px 2px black;*/
-  background: #378e8e;
+  background: #ffba2f;
 }
 
 a{
