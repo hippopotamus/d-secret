@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var votes = {}
+  // var votes = {}
 
   $.getJSON("/hotness/get", function(data){
     $.each($('.juicy'), function(index, value){
@@ -10,8 +10,8 @@ $(document).ready(function() {
   $('a').click(function(e){
     e.preventDefault();
     console.log($('a').not($(this).children()).children());
-    $('a').not($(this).children()).children().css("background-color", "#104BA9");
-    $(this).children().css("background-color", "red");
+    $('a').not($(this).children()).children().css("background-color", "#23bdbd");
+    $(this).children().css("background-color", "#ffba2f");
     $.ajax({
       url: "/"+$(this).attr("id"),
       type: "GET"
@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
   });
 
-$(".right").on('click','#submit_comment',(function(e){
+  $(".right").on('click','#submit_comment',(function(e){
     e.preventDefault();
     $.ajax({
       type: "post",
