@@ -140,12 +140,17 @@ th {
 .juicy{
   width: 0;
   height: .4em;
+  bottom: 1em;
   background-color: yellow;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+  position: absolute;
 }
 
 .hottext{
-  margin:0 0 0 5em;
-  font-size: .5em;
-  float: left;
+  left: 1em;
+  bottom: 3em;
+  /*margin:0 0 0 5em;*/
+  font-size: .6em;
+  /*float: left;*/
+  position: absolute;
 }
