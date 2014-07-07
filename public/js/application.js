@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  var votes = {}
+
+  $.getJSON("/hotness/get", function(data){
+    $.each($('.juicy'), function(index, value){
+      $(value).css("width", data[$(value).attr('id')]);
+    });
+  });
+
   $('a').click(function(e){
     e.preventDefault();
     $.ajax({
@@ -11,8 +19,17 @@ $(document).ready(function() {
   });
 
   $(".right").on('click','#submit_comment',(function(e){
+    $(".right").html("");
+    $(".right").append(response);
+    $('.right div').hover(function(){
+      $(this).animate({"marginLeft":"+=20"}, 100);
+    }, function(){
+      $(this).animate({"marginLeft":"-=20"}, 100);
+    })
+  }))
+
+  $('#submit_secret').click(function(e){
     e.preventDefault();
-    console.log("hi")
     $.ajax({
       type: "post",
       url: "/new_comment",
@@ -21,7 +38,6 @@ $(document).ready(function() {
         alert("an error occured");
       },
       success: function(data) {
-        console.log(data.secret_id);
         e.preventDefault();
         $.ajax({
           url: "/"+data.secret_id,
@@ -32,7 +48,7 @@ $(document).ready(function() {
         });
       }
     });
-  }));
+  });
 
   $('#submit_secret').click(function(e){
     e.preventDefault();

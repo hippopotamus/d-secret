@@ -103,3 +103,16 @@ color: black;
 th {
   text-align: left;
 }
+
+.juicy{
+  width: 0;
+  height: .4em;
+  background-color: yellow;
+  margin: 0 auto;
+}
+
+.hottext{
+  margin:0 0 0 5em;
+  font-size: .5em;
+  float: left;
+}
