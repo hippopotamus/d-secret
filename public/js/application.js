@@ -8,12 +8,15 @@ $(document).ready(function() {
       $(".right").html("");
       $(".right").append(response);
       });
+
+
     //
     });
 
     //console.log("/"+$(this).attr("id"));
 
-    $('#submit_comment').click(function(e){
+
+  $(".right").on('click','#post_comment',(function(e){
        e.preventDefault();
       $.ajax({
         type: "post",
@@ -23,11 +26,9 @@ $(document).ready(function() {
           alert("an error occured");
         },
         success: function() {
-          window.location.reload();
-        }
-      });
-    });
-
+          window.location.reload()
+      }});
+      }));
 
 
     $('#submit_secret').click(function(e){

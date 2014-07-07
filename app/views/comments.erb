@@ -1,10 +1,10 @@
-<div class="enter_comment">
-  <form id="post_comment" action="/new_comment" method="POST" >
+<!-- <div class="enter_comment">
+ -->  <form id="post_comment" action="/new_comment" method="POST" >
     <input type="hidden" name="id" value="<%=@secret_id%>"></input>
     <textarea name="comment" rows="4" cols="39" placeholder="Comment Here!"></textarea>
     <button id="submit_comment" style="button" type="submit">Submit</button>
   </form>
-</div>
+<!-- </div> -->
 
   <% @comments.each do |comment| %>
   <% @comment = comment %>
