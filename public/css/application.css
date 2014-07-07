@@ -17,7 +17,6 @@ header{
   float:left;
   margin-top: 5px;
   margin-left: 3px;
-
 }
 
 #submit_secret{
@@ -100,3 +99,17 @@ color: black;
 th {
   text-align: left;
 }
+
+.juicy{
+  width: 5%;
+  height: .4em;
+  background-color: yellow;
+  margin: 0 auto;
+}
+
+.hottext{
+  margin:0 0 0 5em;
+  font-size: .5em;
+  float: left;
+}
+

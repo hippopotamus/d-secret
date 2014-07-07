@@ -14,6 +14,15 @@ get '/:secret_id' do
   erb :comments, :layout => false
 end
 
+get '/hotness/get' do
+  votes = {}
+  Secret.all.each{|secret|
+    votes[secret.id] = secret.sum_of_votes
+  }
+  votes.to_json
+  #{votes: Secret.find(params[:id]).sum_of_votes}.to_json
+end
+
 post '/new' do
 	Secret.create(content: params[:content])
 end
