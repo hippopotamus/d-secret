@@ -11,11 +11,9 @@
 
 <div class="container">
   <div class="left">
-
-
     <% @secrets.each do |secret| %>
-    <% @secret = secret %>
-    <%= erb :_secret %>
+      <% @secret = secret %>
+      <%= erb :_secret %>
     <% end %>
   </div>
 

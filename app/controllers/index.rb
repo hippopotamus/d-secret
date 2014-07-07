@@ -20,8 +20,6 @@ post '/new' do
 end
 
 post '/new_comment' do
-  p "hi"
-  p params[:id]
   @secret = Secret.find(params[:id])
   @secret.comments.create(secret_id: params[:id], content: params[:comment])
   content_type :json
