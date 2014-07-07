@@ -8,10 +8,9 @@ get '/' do
 end
 
 get '/:secret_id' do
-  @secret_id = params[:secret_id]
-  secret = Secret.find(params[:secret_id])
-  secret.votes.create(key: session[:id], number: 5) if vote_is_unique?(secret)
-  @comments = secret.comments
+  @secret = Secret.find(params[:secret_id])
+  @secret.votes.create(key: session[:id], number: 5) if vote_is_unique?(@secret)
+  @comments = @secret.comments
   erb :comments, :layout => false
 end
 

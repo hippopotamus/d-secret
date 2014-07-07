@@ -9,6 +9,9 @@ $(document).ready(function() {
 
   $('a').click(function(e){
     e.preventDefault();
+    console.log($('a').not($(this).children()).children());
+    $('a').not($(this).children()).children().css("background-color", "#104BA9");
+    $(this).children().css("background-color", "red");
     $.ajax({
       url: "/"+$(this).attr("id"),
       type: "GET"
