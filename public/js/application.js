@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $.getJSON("/hotness/get", function(data){
     $.each($('.juicy'), function(index, value){
-      $(value).css("width", data[$(value).attr('id')]);
+      $(value).css("width", (data[$(value).attr('id')])*4);
     });
   });
 
