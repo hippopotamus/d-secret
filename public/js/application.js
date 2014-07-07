@@ -20,9 +20,15 @@ $(document).ready(function() {
         alert("an error occured");
       },
       success: function(data) {
-        window.location.reload()
-        $(".righty").html("");
-        $(".righty").append(response);
+        console.log(data.secret_id);
+        e.preventDefault();
+        $.ajax({
+          url: "/"+data.secret_id,
+          type: "GET"
+        }).done(function(response) {
+          $(".righty").html("");
+          $(".righty").append(response);
+        });
       }
     });
   }));

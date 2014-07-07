@@ -20,4 +20,6 @@ post '/new_comment' do
   @secret = Secret.find(params[:id])
   p params[:id]
   @secret.comments.create(secret_id: params[:id], content: params[:comment])
+  content_type :json
+  (Comment.last.to_json)
 end
