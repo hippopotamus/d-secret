@@ -1,7 +1,6 @@
 <header>
-Welcome to D-Secret...
+  Welcome to D-Secret...
 </header>
-
 <div class="enter">
   <form id="post_secret" action="/new" method="POST" >
     <textarea name="content" rows="4" cols="100" placeholder="Enter Your Secret Here!"></textarea>
@@ -11,15 +10,16 @@ Welcome to D-Secret...
 
 
 <div class="container">
-<div class="left">
+  <div class="left">
+    <% @secrets.each do |secret| %>
+      <% @secret = secret %>
+      <%= erb :_secret %>
+    <% end %>
+  </div>
 
+  <div class="right">
 
-  <% @secrets.each do |secret| %>
-  <% @secret = secret %>
-  <%= erb :_secret %>
-  <% end %>
-</div>
-
-<div class="right">
-</div>
+    <div class="righty">
+    </div>
+  </div>
 </div>

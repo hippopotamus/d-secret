@@ -17,7 +17,6 @@ header{
   float:left;
   margin-top: 5px;
   margin-left: 3px;
-
 }
 
 #submit_secret{
@@ -28,6 +27,10 @@ margin-top: 1em;
 margin-top: 1em;
 margin-left: 1em;
 
+}
+.enter_comment{
+
+  margin-bottom: 2em;
 }
 
 
@@ -85,7 +88,7 @@ margin-left: 1em;
   height: 4em;
   border: 2px;
   padding-top: 1px;
-  margin: 50px 3px;
+  margin: 0.5em 3px;
   border-radius: 20px;
   vertical-align: middle;
   color: white;
@@ -99,4 +102,17 @@ color: black;
 
 th {
   text-align: left;
+}
+
+.juicy{
+  width: 0;
+  height: .4em;
+  background-color: yellow;
+  margin: 0 auto;
+}
+
+.hottext{
+  margin:0 0 0 5em;
+  font-size: .5em;
+  float: left;
 }

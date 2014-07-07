@@ -8,10 +8,20 @@ get '/' do
 end
 
 get '/:secret_id' do
+  @secret_id = params[:secret_id]
   secret = Secret.find(params[:secret_id])
-  secret.votes.create(key: session[:id], number: 1) if vote_is_unique?(secret)
+  secret.votes.create(key: session[:id], number: 5) if vote_is_unique?(secret)
   @comments = secret.comments
   erb :comments, :layout => false
+end
+
+get '/hotness/get' do
+  votes = {}
+  Secret.all.each{|secret|
+    votes[secret.id] = secret.sum_of_votes
+  }
+  votes.to_json
+  #{votes: Secret.find(params[:id]).sum_of_votes}.to_json
 end
 
 post '/new' do
@@ -19,5 +29,8 @@ post '/new' do
 end
 
 post '/new_comment' do
-  Comment.create(content: params[:comment])
+  @secret = Secret.find(params[:id])
+  @secret.comments.create(secret_id: params[:id], content: params[:comment])
+  content_type :json
+  Comment.last.to_json
 end

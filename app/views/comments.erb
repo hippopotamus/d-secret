@@ -1,9 +1,10 @@
-  <form id="post_comment" action="/new_comment" method="POST" >
+ <form id="post_comment" action="/new_comment" method="POST" >
+    <input type="hidden" name="id" value="<%=@secret_id%>"></input>
     <textarea name="comment" rows="4" cols="39" placeholder="Comment Here!"></textarea>
     <button id="submit_comment" style="button" type="submit">Submit</button>
-  </form>
+</form>
 
-  <% @comments.each do |comment| %>
+<% @comments.each do |comment| %>
   <% @comment = comment %>
   <%= erb :_comment %>
-  <% end %>
+<% end %>
