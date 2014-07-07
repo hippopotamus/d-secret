@@ -111,7 +111,10 @@ th {
   width: 0;
   height: .4em;
   background-color: yellow;
-  margin: 0 auto;
+  left: 1em;
+  position: absolute;
+  bottom: 0;
+  display: inline;
 }
 
 .hottext{
