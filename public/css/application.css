@@ -1,18 +1,42 @@
 body{
-background: rgb(69,72,77);
+  margin-top: 1em;
+
+  background: -webkit-linear-gradient(#aae5e5, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#aae5e5, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#aae5e5, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#aae5e5, white); /* Standard syntax */
+  /*background: #aae5e5;*/
 }
 
-
 header{
-  width: 100%;
+  display: inline;
+  width: 20%;
   height: 30%;
+}
+
+h1 {
+  /*height: 200px;
+  width: auto;*/
+  margin-top: 2em;
+  display: inline;
 }
 
 img{
   width: auto;
-  height: 12%;
-  padding-left: 8em;
+  height: 75px;
+  padding-left: 6em;
   padding-top: .5em;
+  margin-right: 2em;
+}
+
+.enter{
+  display: inline;
+  padding: 20px 5px 20px 10px;
+  height: 10%;
+  width: 70%;
+  margin-top: 1em;
+  /*box-shadow: 5px 3px 3px #52b2f5;*/
+
 }
 
 #submit_comment{
@@ -21,23 +45,26 @@ img{
   margin-left: 3px;
 }
 
-#submit_secret{
-margin-top: 1em;
-}
-
-.enter{
-width: 80%;
-margin: 0 auto;
-
-}
 .enter_comment{
-
   margin-bottom: 2em;
 }
 
+textarea {
+  /*box-shadow: 1px 2px 2px black;*/
+}
+
+button {
+  border-radius: 2em;
+  background-color: white;
+  /*box-shadow: 1px 2px 2px black;*/
+}
+
+#post_secret{
+  display: inline;
+  width: 50%;
+}
 
 .container{
-  position: absolute;
   top:50px;
   left:10%;
   width: 80%;
@@ -47,11 +74,11 @@ margin: 0 auto;
 }
 
 .left {
-  margin-top: 120px;
   width: 49%;
   float:left;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
+  /*border-left: 1px solid black;
+  border-top: 1px solid black;*/
+  /*box-shadow: 5px 3px 3px black;*/
   height: 95%;
   display: inline-block;
   text-align: center;
@@ -60,47 +87,54 @@ margin: 0 auto;
 }
 
 .right {
-  margin-top: 120px;
   width: 49%;
   float: right;
-  border: 1px solid black;
-  box-shadow: 10px 5px 5px black;
+  /*border: 1px solid black;*/
+  /*box-shadow: 5px 3px 3px black;*/
   display: inline-block;
   height: 95%;
   text-align: center;
+  overflow: scroll;
   background: rgb(226,226,226);
 }
 
 .secret {
-  box-shadow: 1px 2px 2px black;
-  height: 4em;
-  border: 2px;
-  padding-top: 1px;
-  margin: 0.5em 3px;
-  border-radius: 20px;
+  font-size: 1.3em;
+  box-shadow: 2px 3px 3px #5ccccc;
+  height: 6em;
+  /*border: 1px dotted black;*/
+  padding-top: 1em;
+  /*margin: 0.5em 3px;*/
+  margin-bottom: 0.5em;
+  /*border-radius: 20px;*/
   vertical-align: middle;
   color: white;
-  font-family: "Helvetica Light", sans-serif;
-  background: #104BA9;
+  font-family: 'Varela Round', sans-serif;
+  background: #23bdbd;
   position: relative;
 }
 
 
 .comment {
-  box-shadow: 1px 2px 2px black;
-  height: 4em;
-  border: 2px;
-  padding-top: 1px;
+  font-size: 1.3em;
+  height: 5em;
+  padding-top: 1em;
   margin: 0.5em 3px;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   vertical-align: middle;
   color: white;
-  font-family: "Helvetica Light", sans-serif;
-  background: green;
+  font-family: 'Varela Round', sans-serif;
+  /*box-shadow: 1px 2px 2px black;*/
+  background: #ffba2f;
 }
+
+form #post_comment {
+  margin-top: 1em;
+}
+
 a{
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 
 th {
@@ -110,6 +144,7 @@ th {
 .juicy{
   width: 0;
   height: .4em;
+  bottom: 1em;
   background-color: yellow;
   left: 1em;
   position: absolute;
@@ -118,7 +153,10 @@ th {
 }
 
 .hottext{
-  margin:0 0 0 5em;
-  font-size: .5em;
-  float: left;
+  left: 1em;
+  bottom: 3em;
+  /*margin:0 0 0 5em;*/
+  font-size: .6em;
+  /*float: left;*/
+  position: absolute;
 }

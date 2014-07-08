@@ -1,6 +1,7 @@
 ruby '2.0.0'
 source 'https://rubygems.org'
 
+
 # PostgreSQL driver
 gem 'pg'
 
@@ -17,7 +18,7 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 gem 'shotgun'
 
-group :test do
+# group :test, :development do
   gem 'faker'
   gem 'rspec'
-end
+# end
