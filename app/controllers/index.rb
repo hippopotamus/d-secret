@@ -1,9 +1,9 @@
 get '/' do
   get_session_id
+  Secret.all.each{ |secret| secret.destroy if secret.sum_of_votes <= 0 }
   @secrets = Secret.order_by_votes
   @votes = Vote.all
   @votes.each{ |vote| vote.degrade_votes }
-  @secrets.each{ |secret| secret.destroy if secret.sum_of_votes <= 0 }
   erb :index
 end
 
