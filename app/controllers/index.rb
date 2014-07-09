@@ -1,9 +1,7 @@
 get '/' do
   get_session_id
-  Secret.all.each{ |secret| secret.destroy if secret.sum_of_votes <= 0 }
+  delete_degraded_votes
   @secrets = Secret.order_by_votes
-  @votes = Vote.all
-  @votes.each{ |vote| vote.degrade_votes }
   erb :index
 end
 
@@ -20,7 +18,6 @@ get '/hotness/get' do
     votes[secret.id] = secret.sum_of_votes
   }
   votes.to_json
-  #{votes: Secret.find(params[:id]).sum_of_votes}.to_json
 end
 
 get '/logout/now' do
