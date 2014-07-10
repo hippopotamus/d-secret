@@ -2,6 +2,8 @@ class Secret < ActiveRecord::Base
   has_many :comments
   has_many :votes
 
+  validates :content, presence: true
+
   after_save :create_vote
 
   def create_vote
