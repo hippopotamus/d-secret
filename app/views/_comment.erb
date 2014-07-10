@@ -1,4 +1,4 @@
 <div class ="comment">
   <p><%= @comment.content %></p>
+  <p><%= "#{date_format(@comment.created_at)}   #{datetime_am_pm(@comment.created_at)}" %></p>
 </div>
-
