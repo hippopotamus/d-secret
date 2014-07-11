@@ -7,7 +7,7 @@ end
 
 get '/:secret_id' do
   @secret = Secret.find(params[:secret_id])
-  @secret.votes.create(key: session[:id], number: 5) if vote_is_unique?(@secret)
+  @secret.votes.create(key: session[:id], number: 7) if vote_is_unique?(@secret)
   @comments = @secret.comments.order(created_at: :desc)
   erb :comments, :layout => false
 end

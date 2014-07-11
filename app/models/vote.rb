@@ -2,7 +2,7 @@ class Vote < ActiveRecord::Base
   belongs_to :secret
   #validate :vote_is_unique, on: :create
   def degrade_votes
-    self.number -= ( Time.now - self.updated_at ) / 500
+    self.number -= ( Time.now - self.updated_at ) / 250
     self.save
   end
 
